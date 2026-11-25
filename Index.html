@@ -1,1 +1,100 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FlowMed Nexus 2.0</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f5f8f2;color:#18392e}
+header{background:#123d32;color:white;padding:22px}
+header span{color:#c5f36b}
+nav{background:#164b3b;padding:14px;display:flex;gap:20px;overflow:auto}
+nav a{color:white;text-decoration:none;white-space:nowrap;font-size:13px}
+main{padding:20px;max-width:1100px;margin:auto}
+.hero{background:linear-gradient(120deg,#123d32,#00a982);padding:28px;border-radius:18px;color:white;margin-bottom:22px}
+.hero h1{margin:0 0 10px;font-size:25px}
+.hero p{margin:0;color:#d7f5e5}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.card{background:white;padding:20px;border-radius:15px;border:1px solid #e5eee6;box-shadow:0 5px 20px #123d3210}
+.card small{color:#82938a}
+.card h2{color:#00a982;margin:13px 0 4px}
+.section{background:white;margin-top:20px;padding:20px;border-radius:15px;border:1px solid #e5eee6}
+.section h3{margin-top:0}
+.item{padding:13px 0;border-bottom:1px solid #edf1ed;font-size:14px}
+.ai{background:#342b5c;color:white}
+.ai p{color:#ddd5ff}
+input{width:100%;padding:13px;border-radius:9px;border:1px solid #ddd;margin:8px 0}
+button{background:#c5f36b;color:#18392e;padding:12px 18px;border:0;border-radius:9px;font-weight:bold}
+#reply{font-size:13px;line-height:1.5;margin-top:12px}
+footer{text-align:center;color:#82938a;padding:20px;font-size:12px}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,1fr)}main{padding:13px}.hero{padding:21px}}
+</style>
+</head>
+<body>
+<header>
+<h2>✚ FlowMed <span>Nexus 2.0</span></h2>
+<p>Intelligent Healthcare Management</p>
+</header>
+<nav>
+<a href="#dashboard">Dashboard</a>
+<a href="#patients">Patients</a>
+<a href="#appointments">Appointments</a>
+<a href="#beds">Beds</a>
+<a href="#ai">AI Assistant</a>
+</nav>
+<main id="dashboard">
+<div class="hero">
+<h1>Welcome to FlowMed Nexus</h1>
+<p>Smarter healthcare. Connected technology. Better workflows.</p>
+</div>
+<h3>Platform Overview</h3>
+<div class="grid">
+<div class="card"><small>Total Patients</small><h2>120</h2><small>Demo records</small></div>
+<div class="card"><small>Appointments</small><h2>18</h2><small>Demo schedule</small></div>
+<div class="card"><small>Available Beds</small><h2>24</h2><small>Demo availability</small></div>
+<div class="card"><small>AI Services</small><h2>Ready</h2><small>Preview interface</small></div>
+</div>
+
+<div class="section" id="patients">
+<h3>♙ Patient Management</h3>
+<div class="item">Patient 001 — Demo User</div>
+<div class="item">Patient 002 — Demo User</div>
+<div class="item">Patient 003 — Demo User</div>
+</div>
+
+<div class="section" id="appointments">
+<h3>▦ Upcoming Appointments</h3>
+<div class="item">10:00 AM — General Medicine</div>
+<div class="item">11:30 AM — Cardiology</div>
+<div class="item">02:00 PM — Orthopaedics</div>
+</div>
+
+<div class="section" id="beds">
+<h3>▤ Bed Availability</h3>
+<p>General Ward — 75%</p>
+<p>ICU — 45%</p>
+<p>Emergency — 60%</p>
+</div>
+
+<div class="section ai" id="ai">
+<h3>✧ FlowMed AI Assistant</h3>
+<p>Ask a general healthcare information question.</p>
+<input id="question" placeholder="Enter your question...">
+<button onclick="askAI()">Ask FlowMed AI</button>
+<div id="reply">Gemini integration will be connected next.</div>
+</div>
+</main>
+<footer>FlowMed Nexus 2.0 | Student Innovation Project<br>Demo data only. Not for clinical decisions.</footer>
+<script>
+function askAI(){
+let q=document.getElementById("question").value.trim();
+document.getElementById("reply").textContent=q?
+"Your question: "+q+". Gemini AI connection is the next development step.":
+"Please enter a question.";
+}
+</script>
+</body>
+</html>
